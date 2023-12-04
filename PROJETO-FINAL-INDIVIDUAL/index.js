@@ -151,11 +151,11 @@ footer.style.backgroundColor = "#ccc";
 footer.style.padding = "10px";
 
 // Alterna as cores das linhas
-const container = document.querySelector("main");
-const linhas = [];
-const cores = ["#fff", "#ccc"];
-
-for (let i = 0; i < 10; i++) {
-    const element = array[i];
-    
+function alternarCores() {
+    for (let i = 0; i < linhas.length; i++) {
+      linhas[i].style.backgroundColor = cores[i % 2];
+    }
 }
+alternarCores();
+// Define um evento para alternar as cores
+//container.addEventListener("click", alternarCores);
